@@ -1,0 +1,170 @@
+<cate-wrap>
+  <cate-head>
+    <i class="fas fa-users fa-fw"></i>
+    Nhân viên
+  </cate-head>
+
+  <emp-body>
+    <div class="emp-item shadow-lg emp-boss">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+    <div class="emp-item shadow-lg emp-part">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+    <div class="emp-item shadow-lg emp-full">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+    <div class="emp-item shadow-lg emp-new">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+    <div class="emp-item shadow-lg emp-new">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+    <div class="emp-item shadow-lg emp-new">
+      <div class="emp-ava"></div>
+      <div class="emp-name">Trần Quang</div>
+    </div>
+
+
+  </emp-body>
+
+  <cate-btn data-toggle="tooltip" data-placement="bottom" title="<%=!user.store.role?'':'Chỉ cho phép CHT hoặc Ca trưởng'%>">
+    <a href="#" class="<%=!user.store.role?'':'disabled'%> btn btn-lg btn-outline-info mt-3 rounded-pill" data-toggle="modal" data-target="#addEmployee">
+      <i class="fas fa-plus fa-fw"></i>
+      Thêm
+    </a>
+  </cate-btn>
+
+  <cate-btn data-toggle="tooltip" data-placement="bottom" title="<%=!user.store.role?'':'Chỉ cho phép CHT hoặc Ca trưởng'%>">
+    <a href="/employee/manage" class="<%=!user.store.role?'':'disabled'%> btn btn-lg btn-outline-warning mt-3 rounded-pill">
+      <i class="fas fa-cog fa-fw"></i>
+      Quản lý 
+    </a>
+  </cate-btn>
+
+  <div class="alert alert-info mt-5" role="alert">
+    <h5>Chú thích: </h5>
+    <p>
+      <strong>B</strong>: Cửa hàng trưởng/Ca trưởng, 
+      <strong>F</strong>: Nhân viên Full-time,
+      <strong>P</strong>: Nhân viên Part-time,
+      <strong>N</strong>: Nhân viên thử việc,
+    </p>
+  </div>
+</cate-wrap>
+
+<hr />
+
+<cate-wrap>
+  <div class="divided-wrap">
+
+    <div class="left">
+
+      <cate-head>
+        <i class="fas fa-hourglass-end fa-fw"></i>
+        Tổng giờ công / tháng
+      </cate-head>
+
+      <ul class="list-group total-hours list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Trần Quang
+          <span class="badge badge-primary badge-pill">145</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Tiểu Phát
+          <span class="badge badge-primary badge-pill">254</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Minh Trang
+          <span class="badge badge-primary badge-pill">112</span>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="right">
+      <cate-head>
+        <i class="fas fa-handshake fa-fw"></i>
+        Thâm niên
+      </cate-head>
+
+      <ul class="list-group total-hours list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Trần Quang
+          <span class="badge badge-success badge-pill">8 tháng</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Tiểu Phát
+          <span class="badge badge-success badge-pill">16 tháng</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Minh Trang
+          <span class="badge badge-success badge-pill">7 tháng</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</cate-wrap>
+
+<!-- Modal Add Employee-->
+<div class="modal fade" id="addEmployee" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thêm nhân viên</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--Searching-->
+        <div class="input-group flex-nowrap">
+          <input type="text" class="form-control" placeholder="Nhập email hoặc tên...">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary"><i class="fas fa-search fa-fw"></i></button>
+          </div>
+        </div>
+        <!--/Searching-->
+
+        <!--Result-->
+        <ul class="list-group search-employee list-group-flush">
+          <li class="list-group-item d-flex align-items-center">
+            <img src="/public/images/users/t.png">
+            Trần Quang
+            <button class="btn btn-primary ml-auto">Thêm</button>
+          </li>
+
+          <li class="list-group-item d-flex align-items-center">
+            <img src="/public/images/users/t.png">
+            Tiểu Phát
+            <button class="btn btn-primary ml-auto">Thêm</button>
+          </li>
+
+          <li class="list-group-item d-flex align-items-center">
+            <img src="/public/images/users/t.png">
+            Minh Trang
+            <button class="btn btn-primary ml-auto">Thêm</button>
+          </li>
+
+        </ul>
+        <!--/Result-->
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.change-background{
+    width:100%;
+    text-align: center;
+}
+
+.manage-fields{
+    width:70%;
+    margin:20px auto;
+}
+
+.manage-fields span{
+    width:150px;
+}
+
+.manage-fields .input-group{
+    margin:10px 0;
+}
+
+.manage-btn{
+    width: 100%;
+    text-align: center;
+}

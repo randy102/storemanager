@@ -1,0 +1,220 @@
+<cate-wrap>
+    <cate-btn>
+        <a href="/calendar/register" class="btn btn-lg btn-secondary rounded-pill">
+            <i class="fas fa-calendar-plus fa-fw"></i> 
+            Đăng ký lịch
+         </a>
+    </cate-btn>
+
+    <cate-btn data-toggle="tooltip" data-placement="bottom" title="Chỉ cho phép CHT hoặc Ca trưởng">
+        <a href="/calendar/schedule" class="btn btn-lg btn-secondary rounded-pill">
+            <i class="fas fa-calendar fa-fw"></i> 
+            Xếp lịch
+         </a>
+    </cate-btn>
+    <cate-head class="shadow">
+        <i class="fas fa-calendar-alt fa-fw"></i>
+        Lịch làm việc
+    </cate-head>
+    
+    <cal-date>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text">Thời gian: </label>
+            </div>
+            <select class="custom-select font-weight-bold">
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              <option selected>Tuần 1 - 21/6/2019 đến 28/6/2019</option>
+              
+            </select>
+        </div>
+    </cal-date>
+    <cal-body>
+        <table class="table table-bordered text-center shadow">
+            <thead>
+                <tr class="thead-dark">
+                    <th>N.Viên</th>
+                    <th>Th.2</th>
+                    <th>Th.3</th>
+                    <th>Th.4</th>
+                    <th>Th.5</th>
+                    <th>Th.6</th>
+                    <th>Th.7</th>
+                    <th>CN</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td>OFF</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                </tr>
+
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td>OFF</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                </tr>
+
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td>OFF</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>                
+                </tr>
+                
+                <tr class="thead-light">
+                    <th>Tổng giờ</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                </tr>
+            </tbody>
+        </table>
+    </cal-body>
+    <cate-btn>
+        <a href="#" class="btn btn-lg btn-outline-success rounded-pill">
+            <i class="fas fa-check-circle fa-fw"></i> 
+            Chấp thuận
+         </a>
+    </cate-btn>
+
+    <cate-btn data-toggle="tooltip" data-placement="right" title="Báo cáo nếu lịch có sai sót">
+        <a href="#" class="btn btn-lg btn-outline-danger rounded-pill" data-toggle="modal" data-target="#reportCalendar">
+            <i class="fas fa-exclamation-circle fa-fw"></i> 
+            Báo lỗi
+         </a>
+    </cate-btn>
+
+    
+    
+    
+</cate-wrap>
+
+<cate-wrap>
+    <div class="cal-state">
+        <div class="cal-emp-state">
+            <cate-head class="shadow">Trạng thái</cate-head>
+            
+            <div class="state-item shadow">
+                <img src="/public/images/users/t.png">
+                <div class="st-item-name">Trần Quang</div>
+                <div class="st-item-state">
+                    <span class="badge badge-pill badge-success">Đã chấp thuận</span>
+                </div>
+            </div>
+
+            <div class="state-item shadow">
+                <img src="/public/images/users/t.png">
+                <div class="st-item-name">Trần Quang</div>
+                <div class="st-item-state">
+                    <span class="badge badge-pill badge-danger">Đã báo lỗi</span>
+                </div>
+            </div>
+
+            <div class="state-item shadow">
+                <img src="/public/images/users/t.png">
+                <div class="st-item-name">Trần Quang</div>
+                <div class="st-item-state">
+                    <span class="badge badge-pill badge-success">Đã chấp thuận</span>
+                </div>
+            </div>
+
+    
+        </div>
+        <div class="cal-change-log">
+            <cate-head class="shadow">Chỉnh sửa</cate-head>
+            
+            <div class="change-log-item shadow">
+                <div class="log-item-name">
+                    <img src="/public/images/users/t.png">
+                    Trần Quang
+                </div>
+                <div class="log-item-content">
+                    <span class="badge badge-pill badge-warning">Th.4</span> :
+                    <span class="badge badge-pill badge-secondary">6:00 - 14:30</span>
+                    <i class="fas fa-caret-right "></i>
+                    <span class="badge badge-pill badge-success">14:30 - 23:00</span>
+                </div>
+
+                <div class="log-item-content">
+                    <span class="badge badge-pill badge-warning">CN</span> :
+                    <span class="badge badge-pill badge-secondary">14:30 - 18:00</span>
+                    <i class="fas fa-caret-right"></i>
+                    <span class="badge badge-pill badge-success">14:30 - 23:00</span>
+                </div>
+
+                <div class="log-item-date">
+                    Cập nhật ngày 26/06/2019
+                </div>
+            </div>
+
+            <div class="change-log-item shadow">
+                <div class="log-item-name">
+                    <img src="/public/images/users/t.png">
+                    Trần Quang
+                </div>
+                <div class="log-item-content">
+                    <span class="badge badge-pill badge-warning">Th.4</span> :
+                    <span class="badge badge-pill badge-secondary">6:00 - 14:30</span>
+                    <i class="fas fa-caret-right"></i>
+                    <span class="badge badge-pill badge-success">14:30 - 23:00</span>
+                </div>
+
+                <div class="log-item-date">
+                    Cập nhật ngày 26/06/2019
+                </div>
+            </div>
+        </div>
+    </div>
+</cate-wrap>
+
+<!-- Modal Calendar Report-->
+<div class="modal fade" id="reportCalendar" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Báo lỗi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--Report Form-->
+        <div class="form-group">
+            <textarea class="form-control" cols="30" rows="5" placeholder="Lịch có vấn đề gì?"></textarea>
+        </div>
+        <button class="btn btn-danger">Gửi</button>
+        <!--/Report Form-->
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,177 @@
+<% if(typeof user.store != 'undefined' && typeof data != 'undefined'){ %>
+
+<background-wrap>
+    <img class="background" src="/public/images/background/<%-data.background%>"/>
+</background-wrap>
+
+<brand>
+    <br-name>[<%-data.brand%>]<br><%-data.name%></br-name>
+    <br-type>
+        <i class="fas fa-<%-data.icon%> fa-fw"></i> 
+        <%-data.type%>
+    </br-type>
+</brand>
+
+<hr>
+
+<cate-wrap>
+    <cate-head class="shadow"> 
+        <i class="fas fa-bell fa-fw"></i> 
+        Thông báo
+    </cate-head>
+    <div id="dashboard-notif">
+        <notif-body>
+            <div class="notif-dash-item">
+                <div class="notif-head">
+                    <div class="user-ava"></div>
+                    <div class="user-name ">Trần Quang </div>
+                </div>
+                <div class="notif-content">
+                    Đây là thông báo của tui nha! Đây là thông báo 
+                    <div class="notif-date">04/5/2019</div>
+                </div> 
+            </div>
+
+            <div class="notif-dash-item">
+                <div class="notif-head">
+                    <div class="user-ava"></div>
+                    <div class="user-name ">Trần Quang </div>
+                </div>
+                <div class="notif-content">
+                    Đây là thông báo của tui nha! Đây là thông báo
+                    Đây là thông báo của tui nha! Đây là thông báo 
+                    Đây là thông báo của tui nha! Đây là thông báo  
+                    <div class="notif-date">04/5/2019</div>
+                </div> 
+            </div>
+
+            <div class="notif-dash-item">
+                <div class="notif-head">
+                    <div class="user-ava"></div>
+                    <div class="user-name ">Trần Quang </div>
+                </div>
+                <div class="notif-content">
+                    Đây là thông báo của tui nha! Đây là thông báo 
+                    <div class="notif-date">04/5/2019</div>
+                </div> 
+            </div>
+
+            
+        </notif-body>
+    </div>
+</cate-wrap>
+
+<hr>
+
+<cate-wrap>
+    <cate-head class="shadow">
+        <i class="fas fa-calendar-alt fa-fw"></i>
+        Lịch làm việc
+    </cate-head>
+    <cal-body>
+        <table class="table table-bordered text-center shadow">
+            <thead>
+                <tr class="thead-dark">
+                    <th>N.Viên</th>
+                    <th>Th.2</th>
+                    <th>Th.3</th>
+                    <th>Th.4</th>
+                    <th>Th.5</th>
+                    <th>Th.6</th>
+                    <th>Th.7</th>
+                    <th>CN</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td>OFF</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                </tr>
+
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td>OFF</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                </tr>
+
+                <tr>
+                    <th class="table-warning">NV1</th>
+                    <td>OFF</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>
+                    <td am>6:00 - 14:30</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td pm>14:30 - 23:00</td>
+                    <td am>6:00 - 14:30</td>                
+                </tr>
+                
+                <tr class="thead-light">
+                    <th>Tổng giờ</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                    <th>45</th>
+                </tr>
+            </tbody>
+        </table>
+    </cal-body>
+    
+</cate-wrap>
+
+<hr>
+
+<cate-wrap>
+    <cate-head class="shadow">
+        <i class="fas fa-users"></i> 
+        Nhân viên
+    </cate-head>
+    <emp-body>
+        <div class="emp-item shadow-lg emp-boss">
+            <div class="emp-ava"></div>
+            <div class="emp-name">Trần Quang</div>
+        </div>
+        
+        <div class="emp-item shadow-lg emp-part">
+            <div class="emp-ava"></div>
+            <div class="emp-name">Trần Quang</div>
+        </div>
+        
+        <div class="emp-item shadow-lg emp-full">
+            <div class="emp-ava"></div>
+            <div class="emp-name">Trần Quang</div>
+        </div>
+        
+        <div class="emp-item shadow-lg emp-new">
+            <div class="emp-ava"></div>
+            <div class="emp-name">Trần Quang</div>
+        </div>
+        
+        <div class="emp-item shadow-lg emp-new">
+            <div class="emp-ava"></div>
+            <div class="emp-name">Trần Quang</div>
+        </div>
+        
+    </emp-body>
+
+</cate-wrap>
+
+<% } else{%>
+<div class="mt-5 alert alert-danger">
+    Bạn chưa gia nhập cửa hàng nào!
+</div>
+<% } %>

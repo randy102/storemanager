@@ -1,0 +1,121 @@
+<title><%-title%> - <%=user.store ? user.store.name : ''%></title>
+<link rel="stylesheet" href="/public/stylesheets/basic.css">
+<link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" href="/public/stylesheets/calendar.css">
+<link rel="stylesheet" href="/public/stylesheets/dashboard.css">
+<link rel="stylesheet" href="/public/stylesheets/empoyee.css">
+<link rel="stylesheet" href="/public/stylesheets/notification.css">
+<link rel="stylesheet" href="/public/stylesheets/chat.css">
+<link rel="stylesheet" href="/public/stylesheets/fa-all.css">
+<link rel="stylesheet" href="/public/stylesheets/ekko-lightbox.css">
+<link rel="stylesheet" href="/public/stylesheets/store.css">
+<link rel="stylesheet" href="/public/stylesheets/manage.css">
+<link rel="stylesheet" href="/public/stylesheets/profile.css">
+<link rel="stylesheet" href="/public/stylesheets/bootstrap-clockpicker.css">
+
+<script src="/public/javascripts/jquery-3.1.1.min.js"></script>
+<script src="/public/javascripts/popper.min.js"></script>
+<script src="/public/javascripts/bootstrap.min.js"></script>
+<script src="/public/javascripts/bootstrap-clockpicker.js"></script>
+<script src="/public/javascripts/moment.js"></script>
+<script src="/public/javascripts/ekko-lightbox.js"></script>
+<script src="/public/javascripts/babel.min.js"></script>
+<script src="/public/javascripts/react.development.js"></script>
+<script src="/public/javascripts/react-dom.development.js"></script>
+<script src="/public/javascripts/index.js"></script>
+</head>
+
+<body>
+    <nav id="header" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a href="#" class="navbar-brand">
+            <img src="/public/images/logo.png" style="margin-top:-5px; width:60px;" />
+            Store Manager
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <!--Store-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="fas fa-store fa-fw"></i>
+                    <%=user.store ? user.store.name : '' %>
+                </a>
+
+                <div class="dropdown-menu">
+                    <% if(typeof user.storeList != 'undefined'){ %>
+                        <% user.storeList.forEach(function(store){ %>
+                            <% if(store.id != user.store.id){ %>
+                                <a class="dropdown-item" href="/store/switch?id=<%-store.id%>">
+                                    <i class="fas fa-store fa-fw"></i>
+                                    <%-store.name%>
+                                </a>
+                            <% } %>
+                    <% })} %>
+                    
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/store">
+                        <i class="fas fa-plus fa-fw"></i>
+                        Tạo cửa hàng
+                    </a>
+                </div>
+            </li>
+            <!--/Store-->
+
+             <!--Notif-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="fas fa-bell fa-fw"></i>
+                    Thông báo <span class="badge badge-danger">2</span>
+                </a>
+
+                <div class="dropdown-menu  new-notification">
+
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Thông báo</h5>
+                                <small>1 days ago</small>
+                            </div>
+                            <p class="mb-1">CH có yêu cầu gia nhập mới</p>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Tin nhắn</h5>
+                                <small>2 days ago</small>
+                            </div>
+                            <p class="mb-1"><strong>Trần Quang</strong> vừa nhắn tin với bạn</p>
+                        </a>
+                        
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Thông báo</h5>
+                                <small>1 days ago</small>
+                            </div>
+                            <p class="mb-1">Đã có lịch làm việc mới</p>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <!--/Notif-->
+
+            <!--User-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="fas fa-user fa-fw"></i>
+                    <%-user.name%>
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/logout">
+                        <i class="fas fa-sign-out-alt fa-fw"></i>
+                        Đăng xuất
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cog fa-fw"></i>
+                        Cài đặt
+                    </a>
+                </div>
+            </li>
+            <!--/User-->
+        </ul>
+    </nav>

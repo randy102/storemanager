@@ -1,0 +1,23 @@
+<div class="alert alert-light text-center">
+    <h2 class="alert-heading">Gần xong!</h2>
+    <p>Chúng tôi đã gửi cho bạn một Email xác thực qua địa chỉ <a href="#"><%- userAct.email %></a></p>
+    <p>Vui lòng truy cập vào hộp thư và nhấn vào nút <strong>XÁC NHẬN</strong></p>
+    <hr>
+    <p>Vẫn chưa nhận được thư?</p>
+    <p><a href="#" id="resendActivate" class="btn btn-success">Gửi lại</a></p>
+    <p id="sendMailCallback" class="text-success mt-2"></p>
+</div>
+
+<script>
+    var spinner = `
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    `;
+    $('#resendActivate').click(function () {
+        $('#sendMailCallback').html(spinner);
+        jQuery.get('/data/resendactivate?id=<%- userAct.id %>&email=<%- userAct.email%>', function (result) {
+            $('#sendMailCallback').html(result.mail);
+        });
+    });
+</script>

@@ -1,0 +1,220 @@
+cal-body{
+    margin:40px auto;
+    display: block;
+}
+
+cal-body td, cal-body th{
+    white-space: pre;
+}
+
+.cal-state{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:10px auto;
+    padding:20px 0;
+}
+
+.cal-emp-state{
+    flex-grow: 5;
+    width: 50%;
+}
+
+.cal-emp-state .state-item{
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px auto;
+    width: 90%;
+    border-radius: 40px;
+    
+}
+
+.cal-emp-state .state-item img{
+    width: 60px;
+    height: 60px;
+    border-radius:100%;
+    margin:5px 7px;
+}
+.cal-emp-state .state-item .st-item-name{
+    font-size:18px;
+    font-weight: 500;
+    padding:20px 5px;
+    width: 48%;
+}
+.cal-emp-state .state-item .st-item-state{
+    padding:24px 0;
+    font-size: 20px;
+}
+
+.cal-change-log{
+    flex-grow: 5;
+    width: 50%;
+}
+
+cal-regist input{
+    font-weight:bold !important;
+}
+
+.change-log-item{
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px auto;
+    width: 90%;
+    border-radius: 40px;
+}
+
+.change-log-item .log-item-name{
+    font-weight:bold;
+    padding:15px 0;
+    font-size:20px;
+    width:100%;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.change-log-item .log-item-name img{
+    width:60px;
+    height:60px;
+    border-radius: 100%;
+    margin:0 15px;
+}
+
+.change-log-item .log-item-content{
+    font-size: 22px;
+    padding:15px 20px;
+    width:100%;
+    font-weight: bold;
+}
+
+.change-log-item .log-item-date{
+    font-size:18px;
+    padding:10px 25px;
+    width:100%;
+    padding-bottom: 15px;
+    border-top: 1px solid #c2c2c2;
+}
+
+.schedule-wrap{
+    display: flex;
+    width:100%;
+    margin:20px 0;
+}
+
+.schedule-date{
+    text-align: center;
+}
+
+.schedule-edit{
+    width:50%;
+    border-right: 1px solid #dddddd;
+    padding:0 20px;
+    padding-top:50px;
+}
+
+.schedule-edit input{
+    font-weight: 800 !important;
+}
+
+.schedule-edit .input-group-text{
+    width:180px;
+}
+
+.schedule-registered{
+    width:50%;
+    padding:0 30px;
+}
+
+.time-calendar{
+    width:100%;
+    margin:20px 0;
+}
+
+.time-calendar thead th{
+    padding:15px 0;
+}
+
+.time-calendar thead tr{
+    border-bottom: 5px solid #b6b3b3;
+    background: gray;
+    color:white;
+}
+
+.time-calendar tbody{
+    background:#343a40;
+}
+
+.time-calendar tbody tr{
+    border-bottom:1px solid #aeaeae;
+}
+
+.time-calendar tbody td{
+    padding:15px 0;
+}
+
+.time-calendar tbody th{
+    font-size: 20px;
+    color: white;
+}
+
+
+.time-calendar th, .time-calendar td{
+    text-align: center;
+}
+
+#time-header{
+    display: grid;
+    width:850px;
+    grid-template-columns: repeat(24, 1fr);
+    
+}
+
+#time-header div{
+    padding-left:20px;
+}
+
+.timeh1{
+    grid-column-start: 6;
+}
+
+.timeh2{
+    grid-column-start: 12;
+}
+
+.timeh3{
+    grid-column-start: 18;
+}
+
+
+.time-bar{
+    display: grid;
+    width: 850px;
+    grid-template-columns: repeat(24, 1fr);
+}
+
+.time-element{
+    padding: 4px 0;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2px 0;
+    font-weight: bold;
+}
+
+.time-element:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.cal-note{
+    display: flex;
+    margin:10px 0;
+    padding:10px;
+    border-radius: 10px;
+    background: #343a40;
+}
+
+.cal-note > .time-element{
+    padding:5px 20px;
+    margin: 5px;
+    font-size: 18px;
+}

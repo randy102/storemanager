@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+
+background-wrap{
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index:-1000;
+}
+
+.background{
+    width: 90%;
+    margin:30px auto;
+    height:400px;
+    display: block;
+    border-radius: 100px;
+}
+
+background-wrap::before, background-wrap::after{
+    position: absolute;
+    content:"";
+    width:80px;
+    height: 400px;
+    top:0px;
+    
+}
+
+background-wrap::before{
+    left:45px;
+    background: linear-gradient(to left, #ffffff00, #ffffff7a);
+}
+background-wrap::after{
+    right:45px;
+    background: linear-gradient(to right, #ffffff00, #ffffff7a);
+}
+
+brand{
+    margin: 20px 50px;
+    display: block;
+    padding: 15px 10px;
+    border-radius: 75px;
+}
+
+brand br-name{
+    font-size: 45px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    color:var(--main-dark);
+    font-family: 'Mali', cursive;
+}
+
+brand br-type{
+    text-align: center;
+    display: block;
+    color:black;
+    border-top:1px solid #c4c4c4;
+    padding-top:10px;
+    margin-top:10px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+
+
+

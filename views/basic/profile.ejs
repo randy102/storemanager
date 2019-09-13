@@ -1,0 +1,78 @@
+<cate-wrap>
+    <cate-head>
+        <i class="fas fa-user fa-fw"></i>
+        Hồ sơ cá nhân
+    </cate-head>
+    <div class="profile-wrap shadow">
+        <div class="profile-img">
+            <img src="/public/images/users/t.png" alt="">
+            <div class="profile-img-edit">
+                <button id="change-profile-btn" class="btn btn-primary btn-lg" data-toggle="tooltip" data-placment="top"
+                    title="Thay đổi ảnh đại diện"><i class="fas fa-edit"></i></button>
+            </div>
+            <form action="">
+                <input id="change-profile-img" type="file">
+            </form>
+        </div>
+        <div class="profile-fields">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Tên</span>
+                </div>
+                <input class="form-control" type="text" name="">
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email</span>
+                </div>
+                <input class="form-control" type="email" name="">
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Địa chỉ</span>
+                </div>
+                <input class="form-control" type="text" name="">
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Mật khẩu </span>
+                </div>
+                <input id="password" class="form-control" type="password" name="">
+                <div class="input-group-append">
+                    <button id="view-password" class="btn btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ngày sinh </span>
+                </div>
+                <input class="form-control" type="date" name="">
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Tự giới thiệu </span>
+                </div>
+                <textarea class="form-control" name="" id=""></textarea>
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Kinh nghiệm làm việc </span>
+                </div>
+                <textarea class="form-control" name=""></textarea>
+            </div>
+        </div>
+
+        <cate-btn>
+            <a href="#" class="btn btn-lg btn-outline-success rounded-pill">
+                <i class="fas fa-check-circle fa-fw"></i>
+                Lưu
+            </a>
+        </cate-btn>
+    </div>
+</cate-wrap>

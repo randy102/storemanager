@@ -1,0 +1,138 @@
+.chat-wrap{
+    display: flex;
+}
+
+.chat-wrap .chat-left, .chat-wrap .chat-right{
+    padding: 10px;    
+}
+
+.chat-left{
+    width:60%;
+}
+
+.chat-left .chat-window{
+    width:100%;
+    padding:15px;
+    border-radius: 40px;
+    border:1px solid #b4b4b4;
+}
+
+.chat-window .chat-object{
+    width:100%;
+    display: flex;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chat-window .chat-object-name{
+    padding:15px 0;
+}
+
+.chat-object img{
+    border-radius: 100%;
+    width:60px;
+    height: 60px;
+    margin:0 15px;
+}
+
+.chat-content{
+    width:100%;
+    height:400px;
+    overflow-y: scroll;
+    padding:10px;
+    position: relative;
+}
+
+.chat-content::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 45px;
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, #ffffff, #ffffff59);;
+}
+
+.chat-item-other, .chat-item-self{
+    font-size: 20px;
+    padding:10px;
+    max-width: 80%;
+    border:1px solid  #ececec;
+    margin:10px 0;
+    clear: both;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.chat-content .chat-item-other{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin:10px 0;
+    color:#323232;
+    float:left;
+    
+}
+
+.chat-content .chat-item-self{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-left:auto;
+    color:black;
+    text-align: right;
+    float:right;
+    background: #e8e8e8;
+}
+
+.chat-input{
+    margin:10px 0;
+}
+
+.chat-input input{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.chat-input button{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.chat-right{
+    width:40%;
+}
+
+.chat-account{
+    display: flex;
+    border-radius: 50px;
+    margin:10px 0;
+}
+
+.chat-account:hover{
+    cursor: pointer;
+    box-shadow:0 0.2rem 0.2rem rgba(0,0,0,.15) !important;
+    transition: box-shadow 0.2s;
+}
+
+
+.chat-account img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 10px 12px;
+}
+
+.chat-account .chat-acc-name{
+    font-size: 18px;
+    padding: 22px 0;
+    font-weight: bold;
+}
+
+.chat-online i{
+    color:#22d500;
+    font-size: 25px;
+}
+
+.chat-offline i{
+    color:gray;
+    font-size: 25px;
+}

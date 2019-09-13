@@ -1,0 +1,64 @@
+.profile-wrap{
+    width:80%;
+    margin:20px auto;
+    border-radius: 30px;
+    padding:20px;
+}
+
+.profile-img{
+    width:100%;
+    text-align: center;
+    margin:20px 0;
+    position: relative;
+}
+
+.profile-img img{
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.profile-img .profile-img-edit{
+    position:absolute;
+    top:0px;
+    left:240px;
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+    background: #00000038;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profile-img input{
+    visibility: hidden;
+}
+
+.profile-img:hover .profile-img-edit{
+    visibility: visible;
+}
+
+.profile-fields .input-group{
+    margin:10px 0;
+}
+
+.profile-fields span{
+    width:180px;
+    justify-content: center;
+}
+
+.profile-fields input, .profile-fields textarea, .profile-fields button{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.profile-fields textarea{
+    overflow: hidden;
+}
+
+.profile-wrap cate-btn{
+    width:100%;
+}

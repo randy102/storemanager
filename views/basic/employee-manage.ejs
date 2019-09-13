@@ -1,0 +1,132 @@
+<cate-wrap>
+    <cate-head>
+        <i class="fas fa-cog fa-fw"></i>
+        Quản lý nhân viên
+    </cate-head>
+
+    <% if(typeof empList != 'undefined'){ %>
+    <table class="emp-manage table table-striped mt-3 shadow text-center">
+        <thead>
+            <tr>
+                <th scope="col" id="name-col">Tên</th>
+                <th scope="col">Email</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Vai trò</th>
+                <th scope="col">Xem</th>
+                <th scope="col">Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% empList.forEach(function(emp){ %>
+            <tr>
+                <th scope="row"><%-emp.name %></th>
+                <td><%-emp.email %></td>
+                <td><%-emp.phone %></td>
+                <td><%-emp.address %></td>
+                <td>
+                    <select id="changeRole" data-id="<%- emp.id %>" class="custom-select">
+                        <option <%=emp.role==0?'selected':''%> value="0">CHT/CT</option>
+                        <option <%=emp.role==1?'selected':''%> value="1">Full-time</option>
+                        <option <%=emp.role==2?'selected':''%> value="2">Part-time</option>
+                        <option <%=emp.role==3?'selected':''%> value="3">Thử việc</option>
+                    </select>
+                </td>
+                <td><a class="btn btn-info" href="/employee/profile?id=<%- emp.id %>"><i class="fas fa-eye"></i></a>
+                </td>
+                <td><button id="deleteEmp" data-id="<%- emp.id %>" class="btn btn-danger"><i
+                            class="fas fa-trash-alt"></i></button></td>
+            </tr>
+            <% }); %>
+
+        </tbody>
+    </table>
+    <%}else{%>
+    <div class="alert alert-info text-center">Cửa hàng chưa có thành viên nào!</div>
+    <%}%>
+    <hr/>
+
+    <cate-head>
+        <i class="fas fa-cog fa-fw"></i>
+        Yêu cầu gia nhập
+    </cate-head>
+
+    <% if(typeof applyList != 'undefined'){ %>
+    <table class="emp-manage table table-striped mt-3 shadow text-center">
+        <thead>
+            <tr>
+                <th scope="col">Tên</th>
+                <th scope="col">Email</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Xem</th>
+                <th scope="col">Chấp thuận</th>
+                <th scope="col">Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% applyList.forEach(function(emp){ %>
+            <tr>
+                <th scope="row"><%-emp.name %></th>
+                <td><%-emp.email %></td>
+                <td><%-emp.phone %></td>
+                <td><%-emp.address %></td>
+                <td><a class="btn btn-info" href="/employee/profile?id=<%- emp.id %>"><i class="fas fa-eye"></i></a>
+                </td>
+                <td><button id="approveApply" data-id="<%- emp.id %>" class="btn btn-success"><i
+                            class="fas fa-check"></i></button></td>
+                <td><button id="deleteApply" data-id="<%- emp.id %>" class="btn btn-danger"><i
+                            class="fas fa-trash-alt"></i></button></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <%}else{%>
+    <div class="alert alert-info text-center">Hiện tại chưa có yêu cầu gia nhập mới!</div>
+    <%}%>
+    <cate-btn>
+        <a href="/employee" class="btn btn-lg btn-outline-info mt-3 rounded-pill">
+            <i class="fas fa-arrow-alt-circle-left fa-fw"></i>
+            Trở về
+        </a>
+    </cate-btn>
+</cate-wrap>
+
+
+
+<!--Modal confirm-->
+<div id="modal-confirm" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Bạn có chắc chắn?</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Không</button>
+              <button id="confirmTrue" type="button" class="btn btn-success">Có</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Modal Loading-->
+    <div id="modal-loading" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                
+               <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+<script type="text/javascript" src="/public/javascripts/ajax/employee-manage.js"></script>

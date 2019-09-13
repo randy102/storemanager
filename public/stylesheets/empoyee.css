@@ -1,0 +1,89 @@
+emp-body{
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px auto;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+emp-body .emp-item{
+    border-radius: 40px;
+    display: flex;
+    width:30%;
+    margin: 10px 0;
+    padding:5px 0;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+emp-body .emp-item:hover{
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.32) !important;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.emp-item .emp-ava{
+    width: 50px;
+    height: 50px;
+    background: url(/public/images/users/t.png);
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+.emp-item .emp-name{
+    flex-grow: 9;
+    padding: 13px 10px;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+emp-body .emp-item::after{
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    vertical-align: middle;
+    color: white;
+    padding: 20px 8px;
+    font-weight: bold;
+}
+
+emp-body .emp-boss::after{
+    content:"B";
+    background:#f64545;
+}
+
+emp-body .emp-full::after{
+    content: "F";
+    background:#cbcb20;
+}
+
+emp-body .emp-part::after{
+    content:"P";
+    background: #76dd76;
+}
+
+emp-body .emp-new::after{
+    content:"N";
+    background: #36d5e9;
+}
+
+.total-hours{
+    font-size:20px;
+    margin-top:20px;
+}
+
+.search-employee img{
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    margin-right:20px;
+}
+
+.emp-manage #name-col{
+    width:180px;
+}

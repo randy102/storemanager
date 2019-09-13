@@ -1,0 +1,70 @@
+<cate-wrap>
+    <cate-head>
+        <i class="fas fa-user fa-fw"></i>
+        Hồ sơ cá nhân
+    </cate-head>
+    <div class="profile-wrap shadow">
+        <% if(typeof employee != 'undefined'){ %>
+  
+            <div class="profile-img">
+                <img src="/public/images/users/<%- employee.avatar %>">
+            </div>
+            <div class="profile-fields">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Tên</span>
+                    </div>
+                    <input disabled value="<%- employee.name %>" class="form-control" type="text" >
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Email</span>
+                    </div>
+                    <input disabled value="<%- employee.email %>" class="form-control" type="email" >
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Địa chỉ</span>
+                    </div>
+                    <input disabled value="<%- employee.address %>" class="form-control" type="text" >
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Ngày sinh </span>
+                    </div>
+                    <input disabled value="<%- employee.birthdate %>" class="form-control" type="date" >
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Tự giới thiệu </span>
+                    </div>
+                    <textarea style="resize:none" disabled class="form-control" >
+                        <%- employee.intro %>
+                    </textarea>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Kinh nghiệm làm việc </span>
+                    </div>
+                    <textarea style="resize:none" disabled class="form-control">
+                            <%- employee.exp %>
+                    </textarea>
+                </div>
+            </div>
+
+        <% }else{ %>
+            <div class="alert alert-info text-center">Hồ sơ không tồn tại</div>
+        <% } %>
+        <cate-btn>
+            <a href="/employee/manage" class="btn btn-lg btn-outline-info rounded-pill">
+                <i class="fas fa-arrow-alt-circle-left fa-fw"></i>
+                Trở về
+            </a>
+        </cate-btn>
+    </div>
+</cate-wrap>

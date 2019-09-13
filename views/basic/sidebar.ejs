@@ -1,0 +1,45 @@
+<sidebar>
+    <currentPage><%-view%></currentPage>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" href="/dashboard">
+                <i class="fas fa-tachometer-alt fa-fw"></i> Trang chủ
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= user.store?'':'disabled' %>" href="/calendar">
+                <i class="fas fa-calendar-alt fa-fw"></i> Lịch làm việc
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= user.store?'':'disabled' %>" href="/employee">
+                <i class="fas fa-users fa-fw"></i> Nhân viên
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= user.store?'':'disabled' %>" href="/notification">
+                <i class="fas fa-bell fa-fw"></i> Thông báo
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= user.store?'':'disabled' %>" href="/chat">
+                <i class="fas fa-comments fa-fw"></i> Phòng Chat
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/store">
+                <i class="fas fa-store fa-fw"></i> Cửa hàng
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/profile">
+                <i class="fas fa-id-badge fa-fw"></i> Bản thân
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= user.store?'':'disabled' %>" href="/manage">
+                <i class="fas fa-cogs fa-fw"></i> Quản lý CH
+            </a>
+        </li>
+    </ul>
+</sidebar>

@@ -1,0 +1,113 @@
+<cate-wrap>
+    <cate-head>
+        <i class="fas fa-bell fa-fw"></i>
+        Thông báo
+    </cate-head>
+
+    <!--Notification creating-->
+    <div class="notif-create shadow-lg">
+
+        <textarea placeholder="Nhập thông báo..."></textarea>
+
+        <div class="notif-upload-img">
+            <div class="upload-img-wrap">
+                <img src="/public/images/notification/1.jpg">
+                <div class="img-remove-btn">
+                    <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="upload-img-wrap">
+                <img src="/public/images/notification/2.jpeg">
+                <div class="img-remove-btn">
+                    <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="upload-img-wrap">
+                <img src="/public/images/notification/3.jpg">
+                <div class="img-remove-btn">
+                    <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="notif-btn">
+            <button class="btn btn-lg btn-outline-success rounded-pill float-right">
+                <i class="fas fa-paper-plane fa-fw"></i>
+                Đăng
+            </button>
+            <button id="upload-img-btn" class="btn btn-lg btn-outline-dark rounded-pill float-right"
+                data-toggle="tooltip" data-placement="top" title="(Tối đa 5 ảnh)">
+                <i class="fas fa-images fa-fw"></i>
+                Thêm ảnh
+            </button>
+            <input multiple id="upload-img-form" type="file" name="" id="">
+        </div>
+
+    </div>
+    <!--/Notification creating-->
+
+
+    <a href="/notification/list" class="mt-3 btn btn-lg btn-secondary rounded-pill">
+        <i class="fas fa-list fa-fw"></i>
+        Thông báo đã đăng
+    </a>
+
+
+    <hr />
+
+    <!--Notification list-->
+    <div class="notif-item shadow-lg">
+        <div class="notif-heading">
+            <img src="/public/images/users/t.png">
+            <div class="notif-auth">
+                Trần Quang
+            </div>
+        </div>
+        <div class="notif-content">
+            Đây là thông báo của tui nha nha mấy bạn nhớ xem nha rồi làm nha nhớ nha.
+        </div>
+        <div class="notif-img">
+            <a href="/public/images/notification/1.jpg" data-max-width="800" data-max-height="800"
+                data-toggle="lightbox">
+                <img src="/public/images/notification/1.jpg" class="img-fluid">
+            </a>
+
+            <a href="/public/images/notification/2.jpeg" data-max-width="800" data-max-height="800"
+                data-toggle="lightbox">
+                <img src="/public/images/notification/2.jpeg" class="img-fluid">
+            </a>
+
+            <a href="/public/images/notification/3.jpg" data-max-width="800" data-max-height="800"
+                data-toggle="lightbox">
+                <img src="/public/images/notification/3.jpg" class="img-fluid">
+            </a>
+
+            <a href="/public/images/notification/3.jpg" data-max-width="800" data-max-height="800"
+                data-toggle="lightbox">
+                <img src="/public/images/notification/3.jpg" class="img-fluid">
+            </a>
+        </div>
+        <div class="notif-date">
+            Đăng ngày: 26/06/2019
+        </div>
+    </div>
+
+    <div class="notif-item shadow-lg">
+        <div class="notif-heading">
+            <img src="/public/images/users/t.png">
+            <div class="notif-auth">
+                Trần Quang
+            </div>
+        </div>
+        <div class="notif-content">
+            Đây là thông báo của tui nha nha mấy bạn nhớ xem nha rồi làm nha nhớ nha.
+        </div>
+        <div class="notif-img">
+
+        </div>
+        <div class="notif-date">
+            Đăng ngày: 26/06/2019
+        </div>
+    </div>
+    <!--/Notification list-->
+</cate-wrap>
